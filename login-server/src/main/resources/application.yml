@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: login-server
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.29.128:9090/eureka/
+
+mybatis:
+  type-aliases-package: com.wyc.entity
+  mapper-locations: classpath:sql/mapper/*.xml

@@ -1,13 +1,12 @@
 spring:
-  profiles: test
+  profiles: dev
   datasource:
-    name: public
     url: jdbc:mysql://47.106.140.247:3306/public?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     username: public
     password: public
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat
     maxActive: 20
     initialSize: 1
@@ -24,4 +23,4 @@ spring:
 
 
 valueServer:
-  testValue: 测试
+  testValue: 开发

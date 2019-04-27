@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyc.dao.OrgUserRoleMapper">
+  <resultMap id="BaseResultMap" type="com.wyc.entity.OrgUserRole">
+    <id column="id_" jdbcType="VARCHAR" property="id" />
+    <result column="role_id_" jdbcType="VARCHAR" property="roleId" />
+    <result column="user_id_" jdbcType="VARCHAR" property="userId" />
+    <result column="create_time_" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by_" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time_" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by_" jdbcType="VARCHAR" property="updateBy" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from org_user_role
+    where id_ = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wyc.entity.OrgUserRole">
+    insert into org_user_role (id_, role_id_, user_id_, 
+      create_time_, create_by_, update_time_, 
+      update_by_)
+    values (#{id,jdbcType=VARCHAR}, #{roleId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{updateBy,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wyc.entity.OrgUserRole">
+    update org_user_role
+    set role_id_ = #{roleId,jdbcType=VARCHAR},
+      user_id_ = #{userId,jdbcType=VARCHAR},
+      create_time_ = #{createTime,jdbcType=TIMESTAMP},
+      create_by_ = #{createBy,jdbcType=VARCHAR},
+      update_time_ = #{updateTime,jdbcType=TIMESTAMP},
+      update_by_ = #{updateBy,jdbcType=VARCHAR}
+    where id_ = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id_, role_id_, user_id_, create_time_, create_by_, update_time_, update_by_
+    from org_user_role
+    where id_ = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id_, role_id_, user_id_, create_time_, create_by_, update_time_, update_by_
+    from org_user_role
+  </select>
+</mapper>
