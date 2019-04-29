@@ -5,5 +5,5 @@ import com.wyc.entity.OrgUser;
 import java.util.List;
 
 public interface UserService {
-    List<OrgUser> queryUserAll();
+    List<OrgUser> queryUserAll(Integer pageNum,Integer pageSize);
 }

@@ -49,6 +49,38 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!--分页插件-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- Redis缓存整合开始 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!-- Redis缓存整合结束 -->
+
         <!-- generator反向生成 -->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
@@ -100,22 +132,7 @@
                 </dependencies>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>true</filtering>
-            </resource>
 
-            <!--<resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                </includes>
-            </resource>-->
-        </resources>
 
     </build>
 

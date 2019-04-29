@@ -17,3 +17,7 @@ eureka:
 mybatis:
   type-aliases-package: com.wyc.entity
   mapper-locations: classpath:sql/mapper/*.xml
+#
+#pagehelper:
+#  dialect: com.github.pagehelper.dialect.helper.MySqlDialect
+

@@ -22,6 +22,12 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
 
+  redis:
+    database: 0
+    host: 47.106.139.29
+    port: 6379
+    password: agilebpm_redis_2019
+
 
 valueServer:
   testValue: 测试
