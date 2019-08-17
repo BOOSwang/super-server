@@ -1,7 +1,7 @@
 spring:
   profiles: dev
   datasource:
-    url: jdbc:mysql://47.106.140.247:3306/public?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    url: jdbc:mysql://192.168.121.128:3306/public?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     username: public
     password: public
     # 使用druid数据源
@@ -22,9 +22,9 @@ spring:
     maxOpenPreparedStatements: 20
   redis:
     database: 0
-    host: 47.106.139.29
+    host: 192.168.121.128
     port: 6379
-    password: agilebpm_redis_2019
+    password: EC_project
 
 
 
