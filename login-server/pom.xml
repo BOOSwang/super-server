@@ -77,7 +77,7 @@
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>
-            <version>1.0.2</version>
+            <version>3.22.0</version>
         </dependency>
         <!-- Redis缓存整合结束 -->
 
